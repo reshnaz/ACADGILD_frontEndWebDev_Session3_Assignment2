@@ -1,4 +1,21 @@
 # S3A2
+-------------------------------------------------------------
+Please preview car.html for output (this html uses car.js -- transpiled form car.ts)
+
+Problem Statement:
+
+Create Interfaces and Class for implementing them.
+
+Interface: A simple interface that defines the interface for something that can
+drive.
+
+Class: An implementation of a car.
+
+interface Drivable {}, with start(), drive() and getPosition()
+
+class Car implements Drivable {}
+
+--------------------------------------------------------------------
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.4.
 
