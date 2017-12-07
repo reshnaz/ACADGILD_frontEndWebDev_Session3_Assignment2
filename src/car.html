@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>S3A2</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+</head>
+<body>
+  <!-- The HTML displays details of a car's status and position -->
+  <!-- Output is returned from compiled JS file, car.js -->
+  <center>
+      <h1>Session-3, Assignment-2</h1>
+      <!-- Below table holds contents that takes input from user -->
+      <table>
+        <tr>
+          <td>Has the car started?</td>
+          <td>
+            <input type="radio" id="r1" name="cStart" value="Yes" onclick="document.getElementById('row2').hidden=false" checked> Yes
+            <input type="radio" id="r2" name="cStart" value="No" onclick="document.getElementById('row2').hidden=true"> No
+          </td>
+        </tr>
+        <tr id="row2">
+          <td>Current Position (Enter area name)</td>
+          <td><input type="text" id="carPosition"></td>
+        </tr>
+      </table>
+      <br>
+      <!-- Based on the radio button selected, true or false is passed to TS/JS function -->
+      <input type="button" value="Display Result" 
+      onclick="if (document.getElementById('r1').checked) {
+        carStart = true;}
+        else{
+          carStart = false;
+        } 
+        calculate(carStart,document.getElementById('carPosition').value);">
+      <br>
+      <p id="driveResult"></p>
+      <p id="positionResult"></p>
+  </center>
+  <!-- <app-root></app-root> -->
+</body>
+</html>
